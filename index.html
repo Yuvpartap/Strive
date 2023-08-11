@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="login-form">
+        <h3>Login to your account</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <span class="error-message" id="errorMessage"></span>
+        <button id="login-button">Login</button>
+        <p>Don't have an account? <a href="#" id="create-account-link">Create New</a></p>
+    </div>
+
+    <div class="container" id="create-account-form" style="display: none;">
+        <h3>Create Account</h3>
+        <input type="text" id="usernamee" placeholder="Name">
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="passwordd" placeholder="New password">
+        <p class="error-message" id="createErrorMessage"></p>
+        <button id="create-button">Create</button>
+        <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+    </div>
+
+    <div class="container" id="account-created-message" style="display: none;">
+        <h2>Your account has been successfully created. Login to your account</h2>
+        <button id="back-to-login-button">Login</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginForm = document.getElementById("login-form");
+            const createAccountForm = document.getElementById("create-account-form");
+            const accountCreatedMessage = document.getElementById("account-created-message");
+    
+            const loginButton = document.getElementById("login-button");
+            const createButton = document.getElementById("create-button");
+            const backToLoginButton = document.getElementById("back-to-login-button");
+    
+            const createAccountLink = document.getElementById("create-account-link");
+            const loginLink = document.getElementById("login-link");
+            });
+    
+            loginLink.addEventListener("click", checkLogin)
+            {
+                createAccountForm.style.display = "none";
+                accountCreatedMessage.style.display = "none";
+                loginForm.style.display = "block";
+            };
+    
+    </script>    
+</body>
+</html>
